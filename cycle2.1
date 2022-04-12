@@ -1,0 +1,73 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled11.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN635FZ0+/19zWWgRpLvlRc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Mariyaben/python_lab_cycle/blob/main/cycle2.1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Suppose a newly born pair of rabbits, one male and one female, are put in a field. Rabbits can mate at the age of one month so that at the end of its second month, a female has produced another pair of rabbits. Suppose that our rabbits never die and that the female always produces one new pair every month from the second month. Develop a program to show a table containing the number of pairs of rabbits in the first N months."
+      ],
+      "metadata": {
+        "id": "r44m5mCUUXny"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter number of months\"))\n",
+        "a=0\n",
+        "b=1\n",
+        "print(\" No. of months   |   No. of pairs of rabbits\")\n",
+        "for i in range(n):\n",
+        "  t=b\n",
+        "  b=b+a\n",
+        "  a=t\n",
+        "print(\"      \",i+1,\"     |             \",a      )"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "joZlGBv7WlQF",
+        "outputId": "4bf47fa7-3375-41fc-fea1-c4f8e58d8743"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of months9\n",
+            " No. of months   |   No. of pairs of rabbits\n",
+            "       9      |              34\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
